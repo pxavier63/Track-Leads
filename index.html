@@ -20,8 +20,9 @@
     <table id="leads-table">
       <thead>
         <tr>
-          <th>Lead Name</th><th>Creation</th><th>Commercial</th>
-          <th>Qualified</th><th>Status</th><th>Offer Date</th><th>PO Date</th><th>Invoice Date</th>
+          <th>Lead Name</th><th>Creation Date</th><th>Commercial Assigned</th>
+          <th>Qualification Date</th><th>Status</th><th>Offer Date</th><th>PO Date</th><th>Invoice Date</th>
+          <th>Notes / Follow-up</th>
         </tr>
       </thead>
       <tbody id="leads-body"></tbody>
@@ -29,7 +30,6 @@
   </div>
   <script>
     const CSV_URL = "https://docs.google.com/spreadsheets/d/1lMO54WGbkV1-m694K0VJ7VjTD9kNZmdBc55B0QyWlJA/edit?usp=sharing";
-
     async function loadData() {
       const res = await fetch(CSV_URL);
       const text = await res.text();
