@@ -15,8 +15,8 @@
       background: #0f172a;
       color: #f8fafc;
       margin: 0;
-      padding: 24px;
-      overflow-x: hidden;
+      padding: 12px;
+      /* overflow-x: hidden; */
     }
     
     header {
@@ -43,7 +43,9 @@
 
     #table-container {
       width: 100%;
-      overflow: hidden;
+      /* overflow: hidden; */
+      overflow-x: auto; /* Permite deslizar horizontalmente no telemóvel */
+      -webkit-overflow-scrolling: touch; /* Garante scroll fluído e suave no iOS/Safari */
     }
 
     table {
@@ -89,6 +91,22 @@
     .badge-po, .badge-encomenda { background: #16a34a; color: #fff; }
     .badge-invoiced, .badge-faturado { background: #0284c7; color: #fff; }
     .badge-qualified, .badge-qualificado { background: #6366f1; color: #fff; }
+  @media (max-width: 768px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+  th, td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+    white-space: normal; /* Permite que o texto quebre linhas se necessário */
+  }
+
+  .badge {
+    padding: 2px 6px;
+    font-size: 0.7rem;
+  }
+}
   </style>
 </head>
 <body>
